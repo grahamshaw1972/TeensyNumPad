@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 8)
+    (drawings 10)
     (tracks 328)
     (zones 0)
     (modules 37)
@@ -62,8 +62,8 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFFFF)
     (pcbplotparams
-      (layerselection 0x010fc_ffffffff)
-      (usegerberextensions false)
+      (layerselection 0x010f0_ffffffff)
+      (usegerberextensions true)
       (usegerberattributes false)
       (usegerberadvancedattributes false)
       (creategerberjobfile false)
@@ -82,12 +82,12 @@
       (plotvalue true)
       (plotinvisibletext false)
       (padsonsilk false)
-      (subtractmaskfromsilk false)
+      (subtractmaskfromsilk true)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "C:/Dev/TeensyNumPad/TeensyNumPad/gerberFiles"))
   )
 
   (net 0 "")
@@ -1968,6 +1968,12 @@
     )
   )
 
+  (gr_text V1.0 (at 147.6375 66.675 90) (layer F.SilkS) (tstamp 607DAF94)
+    (effects (font (size 2 2) (thickness 0.5)))
+  )
+  (gr_text TeensyNumPad (at 143.66875 66.675 90) (layer F.SilkS)
+    (effects (font (size 2 2) (thickness 0.5)))
+  )
   (gr_line (start 71.4375 177.8) (end 147.6375 177.8) (layer Edge.Cuts) (width 0.05) (tstamp 607C2F56))
   (gr_line (start 68.2625 55.5625) (end 68.2625 174.625) (layer Edge.Cuts) (width 0.05) (tstamp 607C2F55))
   (gr_line (start 147.6375 52.3875) (end 71.4375 52.3875) (layer Edge.Cuts) (width 0.05) (tstamp 607C2F54))
