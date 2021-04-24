@@ -1,5 +1,5 @@
 # TeensyNumPad Firmware
-TeensyNumPad uses QMK firmware. You can upload the teensynumpad.hex file to the Teensy++ 2.0 micro-controller using Teensy Loader : https://www.pjrc.com/teensy/loader.html
+TeensyNumPad uses QMK firmware. You can flash the teensynumpad.hex file to the Teensy++ 2.0 micro-controller using Teensy Loader : https://www.pjrc.com/teensy/loader.html
 
 The .hex file was generated using Keyboard Firmware Builder: https://kbfirmware.com/ 
 
