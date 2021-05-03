@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:teensyNumPadKicad-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -548,7 +549,6 @@ Text GLabel 7350 3000 0    50   Input ~ 0
 COL2
 Text GLabel 7350 3100 0    50   Input ~ 0
 COL3
-NoConn ~ 7350 1600
 NoConn ~ 7350 1700
 NoConn ~ 7350 2300
 NoConn ~ 7350 2400
@@ -557,13 +557,7 @@ NoConn ~ 7350 2600
 NoConn ~ 7350 2700
 NoConn ~ 7350 3200
 NoConn ~ 7350 3300
-NoConn ~ 7350 3400
-NoConn ~ 7350 3500
-NoConn ~ 7350 3600
-NoConn ~ 7350 3700
 NoConn ~ 7350 3800
-NoConn ~ 7350 3900
-NoConn ~ 7350 4000
 NoConn ~ 7350 4100
 NoConn ~ 7350 4200
 NoConn ~ 7350 4300
@@ -578,7 +572,6 @@ NoConn ~ 9450 2500
 NoConn ~ 9450 2600
 NoConn ~ 9450 2700
 NoConn ~ 9450 2800
-NoConn ~ 9450 2900
 NoConn ~ 9450 3000
 NoConn ~ 9450 3100
 NoConn ~ 9450 3200
@@ -636,4 +629,77 @@ F 3 "" H 1525 1975 60  0001 C CNN
 	1    2150 2000
 	1    0    0    -1  
 $EndComp
+$Comp
+L SamacSys_Parts:61PC6F J1
+U 1 1 60901334
+P 6350 4000
+F 0 "J1" H 6950 3335 50  0000 C CNN
+F 1 "61PC6F" H 6950 3426 50  0000 C CNN
+F 2 "SamacSys_Parts:61PC6F" H 7400 4100 50  0001 L CNN
+F 3 "http://www.switchcraft.com/Drawings/61PC6F_CD.pdf" H 7400 4000 50  0001 L CNN
+F 4 "Conn Circular DIN F 6 POS Solder RA Thru-Hole 6 Terminal 1 Port" H 7400 3900 50  0001 L CNN "Description"
+F 5 "21" H 7400 3800 50  0001 L CNN "Height"
+F 6 "502-61PC6F" H 7400 3700 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Switchcraft/61PC6F?qs=I3kMT7EEIOX5qfso%2F%2FYu%2Fg%3D%3D" H 7400 3600 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Switchcraft" H 7400 3500 50  0001 L CNN "Manufacturer_Name"
+F 9 "61PC6F" H 7400 3400 50  0001 L CNN "Manufacturer_Part_Number"
+	1    6350 4000
+	-1   0    0    1   
+$EndComp
+NoConn ~ 6350 3800
+Text GLabel 6350 3700 2    50   Input ~ 0
+GND
+Text GLabel 5150 3800 0    50   Input ~ 0
+GND
+Text GLabel 5150 3900 0    50   Input ~ 0
+GND
+NoConn ~ 5150 4000
+NoConn ~ 5150 3600
+NoConn ~ 5150 3700
+Text GLabel 7000 1600 0    50   Input ~ 0
+GND
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 6092CC8F
+P 7100 1600
+F 0 "#FLG0102" H 7100 1675 50  0001 C CNN
+F 1 "PWR_FLAG" H 7100 1773 50  0000 C CNN
+F 2 "" H 7100 1600 50  0001 C CNN
+F 3 "~" H 7100 1600 50  0001 C CNN
+	1    7100 1600
+	1    0    0    -1  
+$EndComp
+Connection ~ 7100 1600
+Wire Wire Line
+	7100 1600 7000 1600
+Wire Wire Line
+	7100 1600 7350 1600
+NoConn ~ 7350 3700
+NoConn ~ 7350 3600
+Text GLabel 6350 3600 2    50   Input ~ 0
+VCC
+Wire Wire Line
+	9450 2900 9650 2900
+Text GLabel 9750 2900 2    50   Input ~ 0
+VCC
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 6094D3F7
+P 9650 2900
+F 0 "#FLG?" H 9650 2975 50  0001 C CNN
+F 1 "PWR_FLAG" H 9650 3073 50  0000 C CNN
+F 2 "" H 9650 2900 50  0001 C CNN
+F 3 "~" H 9650 2900 50  0001 C CNN
+	1    9650 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 9650 2900
+Wire Wire Line
+	9650 2900 9750 2900
+NoConn ~ 7350 3400
+NoConn ~ 7350 3500
+Wire Wire Line
+	7350 3900 6350 3900
+Wire Wire Line
+	7350 4000 6350 4000
 $EndSCHEMATC
