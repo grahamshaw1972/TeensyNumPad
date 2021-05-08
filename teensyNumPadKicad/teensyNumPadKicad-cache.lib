@@ -23,6 +23,46 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Device_LED
+#
+DEF Device_LED D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Device_LED" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ LED*
+ LED_SMD:*
+ LED_THT:*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_R_Small
+#
+DEF Device_R_Small R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "Device_R_Small" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # MX_Alps_Hybrid_MX-NoLED
 #
 DEF MX_Alps_Hybrid_MX-NoLED MX 0 40 Y Y 1 F N
@@ -41,31 +81,26 @@ X ROW 2 -50 -150 100 U 0 0 1 1 P
 ENDDRAW
 ENDDEF
 #
-# SamacSys_Parts_61PC6F
+# SamacSys_Parts_KCDX-5S-S2
 #
-DEF SamacSys_Parts_61PC6F J 0 30 Y Y 1 F N
-F0 "J" 1050 300 50 H V L CNN
-F1 "SamacSys_Parts_61PC6F" 1050 200 50 H V L CNN
-F2 "61PC6F" 1050 100 50 H I L CNN
-F3 "http://www.switchcraft.com/Drawings/61PC6F_CD.pdf" 1050 0 50 H I L CNN
-F4 "Conn Circular DIN F 6 POS Solder RA Thru-Hole 6 Terminal 1 Port" 1050 -100 50 H I L CNN "Description"
-F5 "21" 1050 -200 50 H I L CNN "Height"
-F6 "502-61PC6F" 1050 -300 50 H I L CNN "Mouser Part Number"
-F7 "https://www.mouser.co.uk/ProductDetail/Switchcraft/61PC6F?qs=I3kMT7EEIOX5qfso%2F%2FYu%2Fg%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
-F8 "Switchcraft" 1050 -500 50 H I L CNN "Manufacturer_Name"
-F9 "61PC6F" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+DEF SamacSys_Parts_KCDX-5S-S2 J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "SamacSys_Parts_KCDX-5S-S2" 750 200 50 H V L CNN
+F2 "KCDX5SS2" 750 100 50 H I L CNN
+F3 "http://www.kycon.com/Pub_Eng_Draw/KCDX-5S-S2.pdf" 750 0 50 H I L CNN
+F4 "Circular DIN Connectors 5P R/A PCB SHIELDED 5mm CIRC DIN RECPT" 750 -100 50 H I L CNN "Description"
+F5 "21.2" 750 -200 50 H I L CNN "Height"
+F6 "Kycon, Inc." 750 -500 50 H I L CNN "Manufacturer_Name"
+F7 "KCDX-5S-S2" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
 DRAW
-P 5 0 1 6 200 100 1000 100 1000 -500 200 -500 200 100 N
+P 5 0 1 6 200 100 700 100 700 -400 200 -400 200 100 N
 X 1 1 0 0 200 R 50 50 0 0 P
 X 2 2 0 -100 200 R 50 50 0 0 P
 X 3 3 0 -200 200 R 50 50 0 0 P
 X 4 4 0 -300 200 R 50 50 0 0 P
-X 5 5 0 -400 200 R 50 50 0 0 P
-X 6 6 1200 0 200 L 50 50 0 0 P
-X GROUND_1 7 1200 -100 200 L 50 50 0 0 P
-X GROUND_2 8 1200 -200 200 L 50 50 0 0 P
-X MH1 MH1 1200 -300 200 L 50 50 0 0 P
-X MH2 MH2 1200 -400 200 L 50 50 0 0 P
+X 5 5 900 0 200 L 50 50 0 0 P
+X MH1 MH1 900 -100 200 L 50 50 0 0 P
+X MH2 MH2 900 -200 200 L 50 50 0 0 P
 ENDDRAW
 ENDDEF
 #
