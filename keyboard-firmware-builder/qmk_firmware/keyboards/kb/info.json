@@ -1,0 +1,32 @@
+{
+    "keyboard_name": "TeensyNumPad",
+    "url": "",
+    "maintainer": "qmk",
+    "width": 4,
+    "height": 5,
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"label":"K00 (D0,C0)", "x":0, "y":0},
+                {"label":"K01 (D0,C1)", "x":1, "y":0},
+                {"label":"K02 (D0,C2)", "x":2, "y":0},
+                {"label":"K03 (D0,C3)", "x":3, "y":0},
+                {"label":"K10 (D1,C0)", "x":0, "y":1},
+                {"label":"K11 (D1,C1)", "x":1, "y":1},
+                {"label":"K12 (D1,C2)", "x":2, "y":1},
+                {"label":"K13 (D1,C3)", "x":3, "y":1},
+                {"label":"K20 (D2,C0)", "x":0, "y":2},
+                {"label":"K21 (D2,C1)", "x":1, "y":2},
+                {"label":"K22 (D2,C2)", "x":2, "y":2},
+                {"label":"K23 (D2,C3)", "x":3, "y":2},
+                {"label":"K30 (D3,C0)", "x":0, "y":3},
+                {"label":"K31 (D3,C1)", "x":1, "y":3},
+                {"label":"K32 (D3,C2)", "x":2, "y":3},
+                {"label":"K43 (D4,C3)", "x":3, "y":3, "h":2},
+                {"label":"K41 (D4,C1)", "x":0, "y":4, "w":2},
+                {"label":"K42 (D4,C2)", "x":2, "y":4}
+            ]
+        }
+    }
+    ,"meta": "https://noroadsleft.github.io/kbf_qmk_converter/"
+}
