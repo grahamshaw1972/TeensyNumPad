@@ -667,9 +667,8 @@ Text GLabel 4850 1900 0    50   Input ~ 0
 KDAT
 Text GLabel 7250 5000 0    50   Input ~ 0
 KCLK
-Text GLabel 4850 1800 0    50   Input ~ 0
+Text GLabel 4850 2000 0    50   Input ~ 0
 KCLK
-NoConn ~ 4850 2000
 $Comp
 L Device:LED LED1
 U 1 1 60985098
@@ -687,20 +686,20 @@ U 1 1 6098634F
 P 5500 4750
 F 0 "R1" V 5304 4750 50  0000 C CNN
 F 1 "150" V 5395 4750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 4750 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 4750 50  0001 C CNN
 F 3 "~" H 5500 4750 50  0001 C CNN
 	1    5500 4750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
 	5400 4750 5150 4750
-Text GLabel 4850 2100 0    50   Input ~ 0
+Text GLabel 5750 1800 2    50   Input ~ 0
 GND
 Text GLabel 4850 4750 0    50   Input ~ 0
 GND
 Text GLabel 6850 2600 0    50   Input ~ 0
 GND
-Text GLabel 5750 1800 2    50   Input ~ 0
+Text GLabel 4850 2100 0    50   Input ~ 0
 VCC
 Text GLabel 5600 4750 2    50   Input ~ 0
 VCC
@@ -723,7 +722,7 @@ U 1 1 609A0157
 P 5500 4400
 F 0 "R2" V 5304 4400 50  0000 C CNN
 F 1 "150" V 5395 4400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 4400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 4400 50  0001 C CNN
 F 3 "~" H 5500 4400 50  0001 C CNN
 	1    5500 4400
 	0    1    1    0   
@@ -757,7 +756,7 @@ U 1 1 609AE843
 P 5500 4050
 F 0 "R3" V 5304 4050 50  0000 C CNN
 F 1 "150" V 5395 4050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 4050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 4050 50  0001 C CNN
 F 3 "~" H 5500 4050 50  0001 C CNN
 	1    5500 4050
 	0    1    1    0   
@@ -785,7 +784,7 @@ U 1 1 609B154C
 P 5500 3700
 F 0 "R4" V 5304 3700 50  0000 C CNN
 F 1 "150" V 5395 3700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 3700 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 3700 50  0001 C CNN
 F 3 "~" H 5500 3700 50  0001 C CNN
 	1    5500 3700
 	0    1    1    0   
@@ -815,7 +814,7 @@ U 1 1 609B4FB1
 P 5500 3350
 F 0 "R5" V 5304 3350 50  0000 C CNN
 F 1 "150" V 5395 3350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 3350 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 3350 50  0001 C CNN
 F 3 "~" H 5500 3350 50  0001 C CNN
 	1    5500 3350
 	0    1    1    0   
@@ -856,7 +855,7 @@ U 1 1 609BA483
 P 5500 3000
 F 0 "R6" V 5304 3000 50  0000 C CNN
 F 1 "150" V 5395 3000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 3000 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 3000 50  0001 C CNN
 F 3 "~" H 5500 3000 50  0001 C CNN
 	1    5500 3000
 	0    1    1    0   
@@ -893,7 +892,7 @@ U 1 1 609DD78A
 P 2050 6150
 F 0 "R7" H 2109 6196 50  0000 L CNN
 F 1 "150" H 2109 6105 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 2050 6150 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 2050 6150 50  0001 C CNN
 F 3 "~" H 2050 6150 50  0001 C CNN
 	1    2050 6150
 	1    0    0    -1  
@@ -947,7 +946,7 @@ U 1 1 609EFA71
 P 2600 6150
 F 0 "R8" H 2659 6196 50  0000 L CNN
 F 1 "150" H 2659 6105 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 2600 6150 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 2600 6150 50  0001 C CNN
 F 3 "~" H 2600 6150 50  0001 C CNN
 	1    2600 6150
 	1    0    0    -1  
@@ -1001,7 +1000,7 @@ U 1 1 609F5549
 P 3150 6150
 F 0 "R9" H 3091 6104 50  0000 R CNN
 F 1 "150" H 3091 6195 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 3150 6150 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 3150 6150 50  0001 C CNN
 F 3 "~" H 3150 6150 50  0001 C CNN
 	1    3150 6150
 	-1   0    0    1   
@@ -1031,4 +1030,5 @@ Text GLabel 3300 6000 2    50   Input ~ 0
 RAMI
 Text GLabel 9350 4400 2    50   Input ~ 0
 RAMI
+NoConn ~ 4850 1800
 $EndSCHEMATC
