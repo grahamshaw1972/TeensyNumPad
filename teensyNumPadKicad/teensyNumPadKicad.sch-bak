@@ -686,7 +686,7 @@ U 1 1 6098634F
 P 5500 4750
 F 0 "R1" V 5304 4750 50  0000 C CNN
 F 1 "150" V 5395 4750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 4750 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 4750 50  0001 C CNN
 F 3 "~" H 5500 4750 50  0001 C CNN
 	1    5500 4750
 	0    1    1    0   
@@ -722,7 +722,7 @@ U 1 1 609A0157
 P 5500 4400
 F 0 "R2" V 5304 4400 50  0000 C CNN
 F 1 "150" V 5395 4400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 4400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 4400 50  0001 C CNN
 F 3 "~" H 5500 4400 50  0001 C CNN
 	1    5500 4400
 	0    1    1    0   
@@ -756,7 +756,7 @@ U 1 1 609AE843
 P 5500 4050
 F 0 "R3" V 5304 4050 50  0000 C CNN
 F 1 "150" V 5395 4050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 4050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 4050 50  0001 C CNN
 F 3 "~" H 5500 4050 50  0001 C CNN
 	1    5500 4050
 	0    1    1    0   
@@ -784,7 +784,7 @@ U 1 1 609B154C
 P 5500 3700
 F 0 "R4" V 5304 3700 50  0000 C CNN
 F 1 "150" V 5395 3700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 3700 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 3700 50  0001 C CNN
 F 3 "~" H 5500 3700 50  0001 C CNN
 	1    5500 3700
 	0    1    1    0   
@@ -814,7 +814,7 @@ U 1 1 609B4FB1
 P 5500 3350
 F 0 "R5" V 5304 3350 50  0000 C CNN
 F 1 "150" V 5395 3350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 3350 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 3350 50  0001 C CNN
 F 3 "~" H 5500 3350 50  0001 C CNN
 	1    5500 3350
 	0    1    1    0   
@@ -855,7 +855,7 @@ U 1 1 609BA483
 P 5500 3000
 F 0 "R6" V 5304 3000 50  0000 C CNN
 F 1 "150" V 5395 3000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 5500 3000 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5500 3000 50  0001 C CNN
 F 3 "~" H 5500 3000 50  0001 C CNN
 	1    5500 3000
 	0    1    1    0   
@@ -868,167 +868,146 @@ Text GLabel 5600 3000 2    50   Input ~ 0
 STA3
 Text GLabel 7250 5300 0    50   Input ~ 0
 STA3
-$Comp
-L MX_Alps_Hybrid:MX-NoLED MX19
-U 1 1 609D6C7A
-P 2100 5800
-F 0 "MX19" H 2133 5981 60  0000 C CNN
-F 1 "MX-NoLED" H 2133 5949 20  0001 C CNN
-F 2 "MX_Alps_Hybrid:MX-1.25U-NoLED" H 1475 5775 60  0001 C CNN
-F 3 "" H 1475 5775 60  0001 C CNN
-	1    2100 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2050 5950 2050 6000
-Wire Wire Line
-	2050 6000 2200 6000
-Wire Wire Line
-	2050 6000 2050 6050
-Connection ~ 2050 6000
-$Comp
-L Device:R_Small R7
-U 1 1 609DD78A
-P 2050 6150
-F 0 "R7" H 2109 6196 50  0000 L CNN
-F 1 "150" H 2109 6105 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 2050 6150 50  0001 C CNN
-F 3 "~" H 2050 6150 50  0001 C CNN
-	1    2050 6150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED LED7
-U 1 1 609DE06B
-P 2050 6450
-F 0 "LED7" V 2043 6332 50  0000 R CNN
-F 1 "LED" V 1998 6333 50  0001 R CNN
-F 2 "LED_THT:LED_D3.0mm" H 2050 6450 50  0001 C CNN
-F 3 "~" H 2050 6450 50  0001 C CNN
-	1    2050 6450
-	0    -1   -1   0   
-$EndComp
-Text GLabel 2050 6650 3    50   Input ~ 0
-GND
-Wire Wire Line
-	2050 6250 2050 6300
-Wire Wire Line
-	2050 6600 2050 6650
-Wire Wire Line
-	2250 5750 2250 5500
-Text GLabel 2250 5500 1    50   Input ~ 0
-VCC
 Text GLabel 9350 4000 2    50   Input ~ 0
 LAMI
-Text GLabel 2200 6000 2    50   Input ~ 0
-LAMI
-$Comp
-L MX_Alps_Hybrid:MX-NoLED MX20
-U 1 1 609EFA67
-P 2650 5800
-F 0 "MX20" H 2683 5981 60  0000 C CNN
-F 1 "MX-NoLED" H 2683 5949 20  0001 C CNN
-F 2 "MX_Alps_Hybrid:MX-1.25U-NoLED" H 2025 5775 60  0001 C CNN
-F 3 "" H 2025 5775 60  0001 C CNN
-	1    2650 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 5950 2600 6000
-Wire Wire Line
-	2600 6000 2750 6000
-Wire Wire Line
-	2600 6000 2600 6050
-Connection ~ 2600 6000
-$Comp
-L Device:R_Small R8
-U 1 1 609EFA71
-P 2600 6150
-F 0 "R8" H 2659 6196 50  0000 L CNN
-F 1 "150" H 2659 6105 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 2600 6150 50  0001 C CNN
-F 3 "~" H 2600 6150 50  0001 C CNN
-	1    2600 6150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED LED8
-U 1 1 609EFA77
-P 2600 6450
-F 0 "LED8" V 2593 6332 50  0000 R CNN
-F 1 "LED" V 2548 6333 50  0001 R CNN
-F 2 "LED_THT:LED_D3.0mm" H 2600 6450 50  0001 C CNN
-F 3 "~" H 2600 6450 50  0001 C CNN
-	1    2600 6450
-	0    -1   -1   0   
-$EndComp
-Text GLabel 2600 6650 3    50   Input ~ 0
-GND
-Wire Wire Line
-	2600 6250 2600 6300
-Wire Wire Line
-	2600 6600 2600 6650
-Wire Wire Line
-	2800 5750 2800 5500
-Text GLabel 2800 5500 1    50   Input ~ 0
-VCC
-Text GLabel 2750 6000 2    50   Input ~ 0
-CTRL
 Text GLabel 9350 4300 2    50   Input ~ 0
 CTRL
-$Comp
-L MX_Alps_Hybrid:MX-NoLED MX21
-U 1 1 609F553F
-P 3200 5800
-F 0 "MX21" H 3233 5981 60  0000 C CNN
-F 1 "MX-NoLED" H 3233 5949 20  0001 C CNN
-F 2 "MX_Alps_Hybrid:MX-1.25U-NoLED" H 2575 5775 60  0001 C CNN
-F 3 "" H 2575 5775 60  0001 C CNN
-	1    3200 5800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3150 5950 3150 6000
-Wire Wire Line
-	3150 6000 3300 6000
-Wire Wire Line
-	3150 6000 3150 6050
-Connection ~ 3150 6000
-$Comp
-L Device:R_Small R9
-U 1 1 609F5549
-P 3150 6150
-F 0 "R9" H 3091 6104 50  0000 R CNN
-F 1 "150" H 3091 6195 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 3150 6150 50  0001 C CNN
-F 3 "~" H 3150 6150 50  0001 C CNN
-	1    3150 6150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:LED LED9
-U 1 1 609F554F
-P 3150 6450
-F 0 "LED9" V 3143 6332 50  0000 R CNN
-F 1 "LED" V 3098 6333 50  0001 R CNN
-F 2 "LED_THT:LED_D3.0mm" H 3150 6450 50  0001 C CNN
-F 3 "~" H 3150 6450 50  0001 C CNN
-	1    3150 6450
-	0    -1   -1   0   
-$EndComp
-Text GLabel 3150 6650 3    50   Input ~ 0
-GND
-Wire Wire Line
-	3150 6250 3150 6300
-Wire Wire Line
-	3150 6600 3150 6650
-Wire Wire Line
-	3350 5750 3350 5500
-Text GLabel 3350 5500 1    50   Input ~ 0
-VCC
-Text GLabel 3300 6000 2    50   Input ~ 0
+Text GLabel 4650 6100 2    50   Input ~ 0
 RAMI
 Text GLabel 9350 4400 2    50   Input ~ 0
 RAMI
 NoConn ~ 4850 1800
+Wire Wire Line
+	3050 5950 3050 6650
+Wire Wire Line
+	3000 6400 3200 6400
+Wire Wire Line
+	3200 6400 3200 5850
+Wire Wire Line
+	3000 6100 3300 6100
+Connection ~ 3000 6100
+Wire Wire Line
+	3000 6100 3000 6200
+Wire Wire Line
+	3000 6100 3000 6000
+Wire Wire Line
+	3200 5850 3150 5850
+Wire Wire Line
+	3200 5800 3200 5500
+$Comp
+L MX_Alps_Hybrid:MX-LED MX19
+U 1 1 60B8188E
+P 3050 5850
+F 0 "MX19" H 3132 6074 60  0000 C CNN
+F 1 "MX-LED" H 3132 6000 20  0000 C CNN
+F 2 "" H 2425 5825 60  0001 C CNN
+F 3 "" H 2425 5825 60  0001 C CNN
+	1    3050 5850
+	1    0    0    -1  
+$EndComp
+Text GLabel 3300 6100 2    50   Input ~ 0
+LAMI
+Text GLabel 3200 5500 1    50   Input ~ 0
+VCC
+Text GLabel 3050 6650 3    50   Input ~ 0
+GND
+$Comp
+L Device:R_Small R7
+U 1 1 609DD78A
+P 3000 6300
+F 0 "R7" H 3059 6346 50  0000 L CNN
+F 1 "150" H 3059 6255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 3000 6300 50  0001 C CNN
+F 3 "~" H 3000 6300 50  0001 C CNN
+	1    3000 6300
+	-1   0    0    1   
+$EndComp
+Text GLabel 3950 6100 2    50   Input ~ 0
+CTRL
+Wire Wire Line
+	3700 5950 3700 6650
+Wire Wire Line
+	3650 6400 3850 6400
+Wire Wire Line
+	3850 6400 3850 5850
+Wire Wire Line
+	3650 6100 3950 6100
+Connection ~ 3650 6100
+Wire Wire Line
+	3650 6100 3650 6200
+Wire Wire Line
+	3650 6100 3650 6000
+Wire Wire Line
+	3850 5850 3800 5850
+Wire Wire Line
+	3850 5800 3850 5500
+$Comp
+L MX_Alps_Hybrid:MX-LED MX20
+U 1 1 60BC4B03
+P 3700 5850
+F 0 "MX20" H 3782 6074 60  0000 C CNN
+F 1 "MX-LED" H 3782 6000 20  0000 C CNN
+F 2 "" H 3075 5825 60  0001 C CNN
+F 3 "" H 3075 5825 60  0001 C CNN
+	1    3700 5850
+	1    0    0    -1  
+$EndComp
+Text GLabel 3850 5500 1    50   Input ~ 0
+VCC
+Text GLabel 3700 6650 3    50   Input ~ 0
+GND
+$Comp
+L Device:R_Small R8
+U 1 1 60BC4B0C
+P 3650 6300
+F 0 "R8" H 3709 6346 50  0000 L CNN
+F 1 "150" H 3709 6255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 3650 6300 50  0001 C CNN
+F 3 "~" H 3650 6300 50  0001 C CNN
+	1    3650 6300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4400 5950 4400 6650
+Wire Wire Line
+	4350 6400 4550 6400
+Wire Wire Line
+	4550 6400 4550 5850
+Wire Wire Line
+	4350 6100 4650 6100
+Connection ~ 4350 6100
+Wire Wire Line
+	4350 6100 4350 6200
+Wire Wire Line
+	4350 6100 4350 6000
+Wire Wire Line
+	4550 5850 4500 5850
+Wire Wire Line
+	4550 5800 4550 5500
+$Comp
+L MX_Alps_Hybrid:MX-LED MX21
+U 1 1 60BD4812
+P 4400 5850
+F 0 "MX21" H 4482 6074 60  0000 C CNN
+F 1 "MX-LED" H 4482 6000 20  0000 C CNN
+F 2 "" H 3775 5825 60  0001 C CNN
+F 3 "" H 3775 5825 60  0001 C CNN
+	1    4400 5850
+	1    0    0    -1  
+$EndComp
+Text GLabel 4550 5500 1    50   Input ~ 0
+VCC
+Text GLabel 4400 6650 3    50   Input ~ 0
+GND
+$Comp
+L Device:R_Small R9
+U 1 1 60BD481A
+P 4350 6300
+F 0 "R9" H 4409 6346 50  0000 L CNN
+F 1 "150" H 4409 6255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 4350 6300 50  0001 C CNN
+F 3 "~" H 4350 6300 50  0001 C CNN
+	1    4350 6300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
