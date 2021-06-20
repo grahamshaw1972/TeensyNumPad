@@ -20,16 +20,24 @@
 // https://noroadsleft.github.io/kbf_qmk_converter/
 
 __attribute__((weak)) void matrix_init_user(void) {
-	CONFIGURE_STA3_FOR_OUTPUT;
-	STA3_ON;
-	CONFIGURE_STA1_FOR_OUTPUT;
+    setPinOutput(F3);
+    writePinHigh(F3);
+    setPinOutput(F5);
 }
 
 __attribute__((weak)) void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
+	static int pressed = 0;
+
 	if( record->event.pressed) {
-		STA1_ON;
+		pressed++;
 	} else {
-		STA1_OFF;
+		pressed--;
+	}
+
+	if( pressed > 0 ) {
+		writePinHigh(F5);
+	} else {
+		writePinLow(F5);
 	}
 }
 
