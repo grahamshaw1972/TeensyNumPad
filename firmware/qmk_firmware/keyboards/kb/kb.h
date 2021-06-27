@@ -20,6 +20,19 @@
 
 __attribute__((weak)) void matrix_init_user(void);
 
+void amikb_sendkey(unsigned char keycode, int press);
+void amikb_reset(void);
+
+// ACLK == KCLK == F6
+#define ACLK	6
+#define ACLK_BIT	(1 << ACLK)
+
+// ADATA == KDAT == F7
+#define ADATA	7
+#define ADATA_BIT	(1 << ADATA)
+
+#define TIMEOUT_MSEC	143
+
 #define LAYOUT( \
     K00, K01, K02, K03,   \
     K10, K11, K12, K13,   \
