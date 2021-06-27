@@ -20,9 +20,11 @@
 // https://noroadsleft.github.io/kbf_qmk_converter/
 
 __attribute__((weak)) void matrix_init_user(void) {
-    setPinOutput(F3);
-    writePinHigh(F3);
-    setPinOutput(F5);
+    setPinOutput(STA3);
+    writePinHigh(STA3);
+    setPinOutput(STA1);
+    setPinOutput(KCLK);
+    writePinHigh(KCLK);
 }
 
 __attribute__((weak)) void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
