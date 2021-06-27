@@ -14,10 +14,43 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <avr/power.h>
 #include "kb.h"
-#include "timer.h"
 
 static void resync(void);
+
+#define PRESCL_256	4
+/* 256 ticks per interrupt, 256 clock divisor */
+#define TICKS_PER_SEC	(F_CPU / 256 / 256)
+
+static volatile unsigned long ticks;
+
+void init_timer(void)
+{
+	power_timer0_enable();
+
+	TCCR0A = 0;
+	TCCR0B = PRESCL_256;
+
+	TIMSK0 |= (1 << TOIE0);	/* enable ovf intr. */
+}
+
+void reset_timer(void)
+{
+	ticks = 0;
+}
+
+unsigned long get_msec(void)
+{
+	return 1000 * ticks / TICKS_PER_SEC;
+}
+
+ISR(TIMER0_OVF_vect)
+{
+	++ticks;
+}
 
 unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
         0x5A,    0x5B,    0x5C,    0x5D,
@@ -36,6 +69,7 @@ __attribute__((weak)) void matrix_init_user(void) {
     setPinOutput(STA1);
     setPinOutput(KCLK);
     writePinHigh(KCLK);
+    init_timer();
 }
 
 __attribute__((weak)) void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -116,10 +150,11 @@ void amikb_sendkey(unsigned char keycode, int press)
 	DDRF &= ~(ACLK_BIT | ADATA_BIT);
 	PORTF &= ~(ACLK_BIT | ADATA_BIT);
 
+
 	/* wait for ack */
-	timer_clear();
+	reset_timer();
 	while(PINF & ADATA_BIT) {
-		if(timer_read() >= TIMEOUT_MSEC) {
+		if(get_msec() >= TIMEOUT_MSEC) {
 			resync();
 			break;
 		}
@@ -135,15 +170,15 @@ static void resync(void)
 		DDRF |= ACLK_BIT | ADATA_BIT;
 
 		PORTF &= ~ACLK_BIT;
-		EIFR |= (1 << INTF1);	/* clear interrupt raised by the previous line */
+		EIFR |= (1 << INTF1);
 		sei();
 		_delay_us(20);
 		PORTF |= ACLK_BIT;
 
 		DDRF &= ~(ACLK_BIT | ADATA_BIT);
 
-		timer_clear();
-		while(timer_read() < TIMEOUT_MSEC) {
+		reset_timer();
+		while(get_msec() < TIMEOUT_MSEC) {
 			if(!(PINF & ADATA_BIT)) {
 				return;
 			}

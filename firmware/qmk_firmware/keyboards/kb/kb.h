@@ -22,6 +22,9 @@ __attribute__((weak)) void matrix_init_user(void);
 
 void amikb_sendkey(unsigned char keycode, int press);
 void amikb_reset(void);
+void init_timer(void);
+void reset_timer(void);
+unsigned long get_msec(void);
 
 // ACLK == KCLK == F6
 #define ACLK	6
