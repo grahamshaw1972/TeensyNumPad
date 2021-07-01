@@ -34,6 +34,13 @@ unsigned long get_msec(void);
 #define ADATA	7
 #define ADATA_BIT	(1 << ADATA)
 
+#define PIN_CTRL 3
+#define CTRL_BIT	(1 << PIN_CTRL)
+#define PIN_LAMI 6
+#define LAMI_BIT	(1 << PIN_LAMI)
+#define PIN_RAMI 2
+#define RAMI_BIT	(1 << PIN_RAMI)
+
 #define TIMEOUT_MSEC	143
 
 #define LAYOUT( \
