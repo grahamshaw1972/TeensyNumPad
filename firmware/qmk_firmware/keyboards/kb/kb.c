@@ -98,6 +98,7 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 
 	unsigned char amigaKeyCode = amiga_keycode_table[record->event.key.row][record->event.key.col];
 	amikb_sendkey(amigaKeyCode, record->event.pressed);
+	amikb_wait_for_ack_resync_if_none();
 
 	return true;
 }
@@ -152,21 +153,54 @@ void amikb_sendkey(unsigned char keycode, int press)
 		PORTF |= ACLK_BIT;
 		_delay_us(20);
 	}
+}
+
+void amikb_wait_for_ack_resync_if_none(void) {
 
 	/* similarly tristate first, then drop the pullups */
 	DDRF &= ~(ACLK_BIT | ADATA_BIT);
 	PORTF &= ~(ACLK_BIT | ADATA_BIT);
 
-
-	/* wait for ack */
 	reset_timer();
+	// Wait for KDAT to go low
 	while(PINF & ADATA_BIT) {
 		if(get_msec() >= TIMEOUT_MSEC) {
 			resync();
 			break;
 		}
 	}
+	DDRF |= ACLK_BIT;
+	PORTF |= ACLK_BIT;
+}
 
+void amikb_wait_for_ack_reset_if_none(long timeout) {
+
+	/* similarly tristate first, then drop the pullups */
+	DDRF &= ~(ACLK_BIT | ADATA_BIT);
+	PORTF &= ~(ACLK_BIT | ADATA_BIT);
+
+	reset_timer();
+	// Wait for KDAT to go low
+	while(PINF & ADATA_BIT) {
+		if(get_msec() >= timeout) {
+			hard_reset();
+			break;
+		}
+	}
+	DDRF |= ACLK_BIT;
+	PORTF |= ACLK_BIT;
+}
+
+void wait_for_amiga(long timeout) {
+	DDRF &= ~(ACLK_BIT | ADATA_BIT);
+	PORTF &= ~(ACLK_BIT | ADATA_BIT);
+	reset_timer();
+	// Wait for KDAT to go high
+	while(!(PINF & ADATA_BIT)) {
+		if(get_msec() >= timeout) {
+			break;
+		}
+	}
 	DDRF |= ACLK_BIT;
 	PORTF |= ACLK_BIT;
 }
@@ -207,11 +241,20 @@ __attribute__((weak)) void housekeeping_task_user(void) {
 	}
 }
 
-void amikb_reset() {
+void hard_reset(void) {
 	DDRF |= ACLK_BIT;
 	PORTF &= ~ACLK_BIT;
 	reset_timer();
 	while(get_msec() < RESET_MSEC) {}
 	while((PINB & CTRL_BIT) && (PINB & LAMI_BIT) && (PINB & RAMI_BIT)) {}
 	PORTF |= ACLK_BIT;
+}
+
+void amikb_reset(void) {
+	amikb_sendkey(AKC_RST_WARN,1);
+	amikb_wait_for_ack_reset_if_none(TIMEOUT_MSEC);
+	amikb_sendkey(AKC_RST_WARN,1);
+	amikb_wait_for_ack_reset_if_none(RESET_WARNING_MSEC);
+	wait_for_amiga(RESET_WARNING_FULL_MSEC);
+	hard_reset();
 }
