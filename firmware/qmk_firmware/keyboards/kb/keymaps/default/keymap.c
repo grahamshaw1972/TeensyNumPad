@@ -15,6 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "kb.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
@@ -26,3 +27,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
 };
+
+unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
+		AKC_PLP,  AKC_PRP,   AKC_PDV,  AKC_PML,
+		AKC_P7,   AKC_P8,    AKC_P9,   AKC_PMN,
+		AKC_P4,   AKC_P5,    AKC_P6,   AKC_PPL,
+		AKC_P1,   AKC_P2,    AKC_P3,   AKC_PEN,
+		AKC_P0,              AKC_PDT
+    );
