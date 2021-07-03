@@ -42,6 +42,7 @@ unsigned long get_msec(void);
 #define RAMI_BIT	(1 << PIN_RAMI)
 
 #define TIMEOUT_MSEC	143
+#define RESET_MSEC	500
 
 #define LAYOUT( \
     K00, K01, K02, K03,   \

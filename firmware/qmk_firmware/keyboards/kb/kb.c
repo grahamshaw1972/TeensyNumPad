@@ -201,7 +201,17 @@ static void resync(void)
 __attribute__((weak)) void housekeeping_task_user(void) {
 	if( (PINB & CTRL_BIT) && (PINB & LAMI_BIT) && (PINB & RAMI_BIT) ){
 		writePinHigh(STA2);
+		amikb_reset();
 	} else {
 		writePinLow(STA2);
 	}
+}
+
+void amikb_reset() {
+	DDRF |= ACLK_BIT;
+	PORTF &= ~ACLK_BIT;
+	reset_timer();
+	while(get_msec() < RESET_MSEC) {}
+	while((PINB & CTRL_BIT) && (PINB & LAMI_BIT) && (PINB & RAMI_BIT)) {}
+	PORTF |= ACLK_BIT;
 }
