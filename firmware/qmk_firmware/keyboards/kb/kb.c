@@ -243,10 +243,12 @@ void hard_reset(void) {
 }
 
 void amikb_reset(void) {
+#ifdef SEND_RESET_WARNING
 	amikb_sendkey(AKC_RST_WARN,1);
 	amikb_wait_for_ack_reset_if_none(TIMEOUT_MSEC);
 	amikb_sendkey(AKC_RST_WARN,1);
 	amikb_wait_for_ack_reset_if_none(RESET_WARNING_MSEC);
 	wait_for_amiga(RESET_WARNING_FULL_MSEC);
+#endif
 	hard_reset();
 }
